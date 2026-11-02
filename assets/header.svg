@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="260" viewBox="0 0 1200 260">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0b1220"/>
+      <stop offset="1" stop-color="#0f1f2a"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#2dd4bf"/>
+      <stop offset="1" stop-color="#38bdf8"/>
+    </linearGradient>
+    <pattern id="dots" width="22" height="22" patternUnits="userSpaceOnUse">
+      <circle cx="2" cy="2" r="1.2" fill="#1f3b47"/>
+    </pattern>
+    <style>
+      .name { font: 700 54px 'Segoe UI', Helvetica, Arial, sans-serif; fill: #e6edf3; }
+      .role { font: 600 22px 'Segoe UI', Helvetica, Arial, sans-serif; fill: url(#accent); }
+      .term { font: 18px Consolas, 'Courier New', monospace; fill: #9fb3c8; }
+      .prompt { fill: #2dd4bf; }
+      .cursor { animation: blink 1s steps(1) infinite; fill: #2dd4bf; }
+      @keyframes blink { 50% { opacity: 0; } }
+      .node { animation: pulse 3s ease-in-out infinite; }
+      .n2 { animation-delay: .6s; } .n3 { animation-delay: 1.2s; } .n4 { animation-delay: 1.8s; }
+      @keyframes pulse { 0%, 100% { opacity: .35; } 50% { opacity: 1; } }
+    </style>
+  </defs>
+
+  <rect width="1200" height="260" rx="18" fill="url(#bg)"/>
+  <rect width="1200" height="260" rx="18" fill="url(#dots)" opacity=".7"/>
+  <rect x="60" y="214" width="190" height="4" rx="2" fill="url(#accent)"/>
+
+  <text x="60" y="102" class="name">Prathmesh Pandya</text>
+  <text x="60" y="142" class="role">Software Engineer · LLM Applications · Backend · Data</text>
+  <text x="60" y="188" class="term"><tspan class="prompt">~/regensburg $</tspan> building LLM apps beyond chat<tspan class="cursor"> █</tspan></text>
+
+  <!-- small pipeline graphic: audio -> text -> LLM -> speech -->
+  <g transform="translate(860,70)" font-family="Consolas, 'Courier New', monospace" font-size="14" fill="#9fb3c8">
+    <line x1="40" y1="20" x2="260" y2="20" stroke="#1f3b47" stroke-width="2"/>
+    <line x1="40" y1="100" x2="260" y2="100" stroke="#1f3b47" stroke-width="2"/>
+    <line x1="40" y1="20" x2="40" y2="100" stroke="#1f3b47" stroke-width="2"/>
+    <line x1="260" y1="20" x2="260" y2="100" stroke="#1f3b47" stroke-width="2"/>
+    <circle cx="40" cy="20" r="9" fill="#2dd4bf" class="node"/>
+    <circle cx="260" cy="20" r="9" fill="#38bdf8" class="node n2"/>
+    <circle cx="260" cy="100" r="9" fill="#2dd4bf" class="node n3"/>
+    <circle cx="40" cy="100" r="9" fill="#38bdf8" class="node n4"/>
+    <text x="0" y="-4">speech</text>
+    <text x="232" y="-4">text</text>
+    <text x="242" y="130">LLM</text>
+    <text x="0" y="130">voice</text>
+  </g>
+</svg>
